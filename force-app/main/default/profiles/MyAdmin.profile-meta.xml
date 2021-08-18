@@ -7,6 +7,11 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ClickDep__c.mytext__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ClickDep__c.MyDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
