@@ -7,6 +7,11 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ClickDep__c.MyDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.AccChkbox__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -70,6 +75,9 @@
         <field>SDO_C360_Address__c.Street__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>ClickDep__c-ClickDep Layout</layout>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>SDO_C360_Address__c-C360 Address Layout</layout>
     </layoutAssignments>
