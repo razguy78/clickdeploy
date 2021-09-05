@@ -7,7 +7,18 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>NewObj1__c.CheckboxmyADM__c</field>
+      <field>NewObj1__c.CheckboxmyADM__c</field>
+        <field>NewDeploy__c.newCheck__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ClickDep__c.mytext__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ClickDep__c.MyDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -76,6 +87,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>NewDeploy__c-NewDeploy Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ClickDep__c-ClickDep Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SDO_C360_Address__c-C360 Address Layout</layout>
     </layoutAssignments>
     <loginIpRanges>
@@ -88,7 +105,16 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>NewObj1__c</object>
+        <object>NewDeploy__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>ClickDep__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1225,4 +1251,8 @@
         <enabled>true</enabled>
         <name>WorkCalibrationUser</name>
     </userPermissions>
+    <classAccesses>
+        <apexClass>LightningLoginFormController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
 </Profile>
