@@ -7,6 +7,7 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
+      <field>NewObj1__c.CheckboxmyADM__c</field>
         <field>NewDeploy__c.newCheck__c</field>
         <readable>true</readable>
     </fieldPermissions>
