@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once the box is checked, it cannot be unchecked. --></errorMessage>
+        <name>silverpop__Disable_Changing_Enable_Sync</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once set to &quot;Yes, Always Sync&quot; or &quot;No, Don&apos;t Sync&quot; it cannot be changed back to &quot;-None-.” --></errorMessage>
+        <name>silverpop__Disable_Changing_To_None</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Engage contact could not sync to Salesforce because the matching lead or contact in Salesforce has been set to not sync. You will need to change the &quot;Sync to Silverpop&quot; setting for the lead or contact in Salesforce. --></errorMessage>
+        <name>silverpop__Prevent_Change_From_Engage</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Send_Silverpop_Email --></label>
+        <name>silverpop__Send_Silverpop_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

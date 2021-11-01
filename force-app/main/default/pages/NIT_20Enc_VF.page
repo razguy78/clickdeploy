@@ -1,0 +1,417 @@
+<apex:page showHeader="true" sidebar="true" controller="NIT_20Enc_CTR" language="he">
+<head>
+	<apex:stylesheet value="{!URLFOR($Resource.lightningDesignSystem, 'assets/styles/salesforce-lightning-design-system.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.javascriptagent)}" />
+</head>
+
+<style type="text/css">
+	.space{
+		height: 30px;
+	}
+
+	.encryptedField{
+		color:red;
+	}
+</style>
+
+<body>
+
+	<apex:pageMessages />
+	
+	<div>
+		 <!-- PAGE HEADER -->
+	    <div class="slds-page-header" role="banner" >
+	      <div class="slds-grid slds-grid--reverse slds-grid--align-center">
+	        <div class="slds-col slds-grid--reverse ">
+	          <h1 class="slds-text-heading--medium">{!$Label.fieldsInLDS}</h1>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- / PAGE HEADER -->
+
+	    <!-- NEW EXPENSE FORM -->
+	    <div class="slds-col slds-col--padded slds-p-top--large">
+
+	        <div class="slds-col slds-col--padded slds-p-top--large">
+          
+          		<div class="slds-grid">
+				    <div class="slds-col">
+					    
+				      	<!-- BOXED AREA -->
+				      	<fieldset class="slds-box slds-theme--default slds-container--small">
+				    
+					        <legend id="" class="slds-text-heading--small 
+					          slds-p-vertical--medium slds-text-align--right">
+					          {!$Label.customer}
+					        </legend>
+					        <!-- CREATE NEW EXPENSE FORM -->
+					        <form class="slds-form--stacked slds-text-align--right">
+					        	<div class="slds-grid">
+					        		<div class="slds-col">
+					        			<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.joinedDate}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										   		<span class="slds-form-element__static">{!customer.JoinedDate__c}</span>
+										  	</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.description}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.Description__c}</span>
+										  	</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.numberOfEmployees}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.NumberOfEmployees__c}</span>
+										    </div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.phone}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.Phone__c}</span>
+											</div>
+										</div>	
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.GUID}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.GUID__c}</span>
+											</div>
+										</div> 
+					        		</div>
+
+					        		<div class="slds-col">
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.fullName}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.FullName__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.companyStartedDate}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.CompanyStartedDate__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.buisnessDomain}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.Industry__c}</span>
+											</div>
+										</div>   
+
+										<div class="slds-form-element encryptedField">
+										  	<span class="slds-form-element__label">{!$Label.annualRevenue}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!customer.AnnualRevenue__c}</span>
+											</div>
+										</div> 
+					        		</div>
+					        	</div>
+					       	</form>
+				        <!-- / CREATE NEW EXPENSE FORM -->
+				      	</fieldset>
+
+				      	<div class="space">
+						</div>
+
+						<fieldset class="slds-box slds-theme--default slds-container--small">
+				    
+					        <legend id="" class="slds-text-heading--small 
+					          slds-p-vertical--medium slds-text-align--right">
+					          {!$Label.contact}
+					        </legend>
+					        <!-- CREATE NEW EXPENSE FORM -->
+					        <form class="slds-form--stacked slds-text-align--right">
+						        <div class="slds-grid">
+						        	<div class="slds-col">
+							          	<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.firstName}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.FirstName}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.lastName}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.LastName}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.birthdate}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.Birthdate}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.IDNumber}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.IDNumber__c}</span>
+											</div>
+										</div>    
+									</div>
+
+									<div class="slds-col">
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.gender}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.Gender__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.phone}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.Phone}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.description}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.Description}</span>
+										  	</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.GUID}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!contact.GUID__c}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+					        </form>
+				        <!-- / CREATE NEW EXPENSE FORM -->
+				      	</fieldset>
+				    </div>
+					<div class="slds-col">
+
+				      	<fieldset class="slds-box slds-theme--default slds-container--small">
+				    
+					        <legend id="" class="slds-text-heading--small 
+					          slds-p-vertical--medium slds-text-align--right">
+					          {!$Label.address}
+					        </legend>
+					        <!-- CREATE NEW EXPENSE FORM -->
+					        <form class="slds-form--stacked slds-text-align--right">
+					        	<div class="slds-grid">
+					        		<div class="slds-col">
+					        			<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.street}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.Street__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.city}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.City__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.postalCode}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.PostalCode__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.country}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.Country__c}</span>
+											</div>
+										</div>
+					        		</div>
+
+					        		<div class="slds-col">
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.type}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.Type__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.contact}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.PrimaryContact__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.customer}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.Customer__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.GUID}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!address.GUID__c}</span>
+											</div>
+										</div>
+					        		</div>
+					        	</div>
+					       	</form>
+				      	</fieldset>
+
+				      	<fieldset class="slds-box slds-theme--default slds-container--small">
+				    
+					        <legend id="" class="slds-text-heading--small 
+					          slds-p-vertical--medium slds-text-align--right">
+					          {!$Label.financialAccount}
+					        </legend>
+					        <!-- CREATE NEW EXPENSE FORM -->
+					        <form class="slds-form--stacked slds-text-align--right">
+					        	<div class="slds-grid">
+					        		<div class="slds-col">
+					        			<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.ceaseActivityDate}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.CeaseActivityDate__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.accountType}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.AccountType__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.accountOpenedOn}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.AccountOpenedOn__c}</span>
+											</div>
+										</div>
+										
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.signatureComponents}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.SignatureComponents__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.accountNumber}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.AccountNumber__c}</span>
+											</div>
+										</div>
+					        		</div>
+
+					        		<div class="slds-col">
+					        			<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.branch}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.Branch__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.fullBranchNumber}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.FullBranchNumber__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.accountName}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.Name}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label encryptedField">{!$Label.signatureComponentCode}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.SignatureComponentCode__c}</span>
+											</div>
+										</div>
+
+										<div class="slds-form-element">
+										  	<span class="slds-form-element__label">{!$Label.status}</span>
+										  	<div class="slds-form-element__control slds-has-divider--bottom">
+										    	<span class="slds-form-element__static">{!financial.Status__c}</span>
+											</div>
+										</div>
+					        		</div>
+					        	</div>
+					       	</form>
+				      	</fieldset>
+
+		    		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="space">
+	</div>
+
+
+	<apex:form style="text-align:right">
+		<apex:pageBlock title="{!$Label.fieldsInVF}">
+			<apex:pageBlockSection title="{!$Label.customer}">
+				<apex:outputField value="{!customer.JoinedDate__c}" />
+				<apex:outputField value="{!customer.Description__c}" />
+				<apex:outputField value="{!customer.NumberOfEmployees__c}" />
+				<apex:outputField value="{!customer.Phone__c}" />
+				<apex:outputField value="{!customer.FullName__c}" />
+				<apex:outputField value="{!customer.CompanyStartedDate__c}"/>
+				<apex:outputField value="{!customer.Industry__c}"/>
+				<apex:outputField value="{!customer.GUID__c}"/>
+				<apex:outputField value="{!customer.AnnualRevenue__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="{!$Label.contact}">
+				<apex:outputField value="{!contact.FirstName}" />
+				<apex:outputField value="{!contact.LastName}"/>
+				<apex:outputField value="{!contact.Birthdate}"/>
+				<apex:outputField value="{!contact.IDNumber__c}"/> 
+				<apex:outputField value="{!contact.Phone}"/>
+				<apex:outputField value="{!contact.Description}" />
+				<apex:outputField value="{!contact.Gender__c}"/>
+				<apex:outputField value="{!contact.GUID__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="{!$Label.address}">
+				<apex:outputField value="{!address.Street__c}" />
+				<apex:outputField value="{!address.City__c}"/>
+				<apex:outputField value="{!address.PostalCode__c}"/>
+				<apex:outputField value="{!address.Country__c}"/> 
+				<apex:outputField value="{!address.Type__c}"/>
+				<apex:outputField value="{!address.PrimaryContact__c}" />
+				<apex:outputField value="{!address.Customer__c}"/>
+				<apex:outputField value="{!address.GUID__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="{!$Label.financialAccount}">
+				<apex:outputField value="{!financial.CeaseActivityDate__c}" />
+				<apex:outputField value="{!financial.AccountType__c}"/>
+				<apex:outputField value="{!financial.AccountOpenedOn__c}"/>
+				<apex:outputField value="{!financial.SignatureComponents__c}"/> 
+				<apex:outputField value="{!financial.AccountNumber__c}"/>
+				<apex:outputField value="{!financial.Branch__c}" />
+				<apex:outputField value="{!financial.FullBranchNumber__c}"/>
+				<apex:outputField value="{!financial.Name}"/>
+				<apex:outputField value="{!financial.SignatureComponentCode__c}"/>
+				<apex:outputField value="{!financial.Status__c}"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+		
+</body>
+
+</apex:page>

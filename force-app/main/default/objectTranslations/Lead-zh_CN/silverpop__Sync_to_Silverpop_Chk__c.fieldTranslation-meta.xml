@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>使用“同步至 Silverpop”确定您想要与 Silverpop 同步的潜在客户。选中方框后，字段值无法更改，选定的潜在客户将同步至 Silverpop 并将始终同步。</help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>

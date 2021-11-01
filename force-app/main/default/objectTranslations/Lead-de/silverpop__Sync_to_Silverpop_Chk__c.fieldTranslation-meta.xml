@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Verwenden Sie „Mit Silverpop synchronisieren“, um zu bestimmen, welche Leads Sie mit Silverpop synchronisieren möchten. Wenn das Kästchen markiert ist, kann der Feldwert NICHT geändert werden, die ausgewählten Leads werden mit Silverpop synchronisiert und stets aktualisiert.</help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>

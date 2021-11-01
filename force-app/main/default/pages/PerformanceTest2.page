@@ -1,0 +1,35 @@
+<apex:page controller="RemotingController">
+    <apex:includeScript value="{!$Resource.javascriptagent}"/>      
+
+    <button onclick="printAccounts()">
+        print Accounts
+    </button>
+    <button onclick="printOpportunities()">
+        print Opportunities
+    </button>
+    <button onclick="printContacts()">
+        print Contacts
+    </button>
+
+    
+    <pre id="json"></pre>
+    
+    <script>
+        function printAccounts(){  
+                RemotingController.get50kAccounts(printJson);
+        }
+        
+    	function printOpportunities(){  
+                RemotingController.get50kOpportunities(printJson);
+        }
+            
+        function printContacts(){  
+    		RemotingController.get50kContacts(printJson);
+       	}
+    
+    	function printJson(data){
+            console.log(data);
+        	document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+        }
+    </script>
+</apex:page>

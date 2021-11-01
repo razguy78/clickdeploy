@@ -1,0 +1,10 @@
+<apex:page >
+	<apex:includeScript value="{!$Resource.javascriptagent}"/>
+
+    <div>This is a test Page that loads a monitoring script from the following Static Resource</div>
+    bnhp_page_monitoring
+	
+    <button onclick="window.location.href= 'https://www.google.com';">
+        click
+    </button>
+</apex:page>

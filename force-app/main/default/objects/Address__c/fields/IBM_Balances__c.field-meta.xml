@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IBM_Balances__c</fullName>
+    <externalId>false</externalId>
+    <label>IBM_Balances</label>
+    <length>80</length>
+    <referenceTo>IBM_Balances__x</referenceTo>
+    <relationshipLabel>Addresses</relationshipLabel>
+    <relationshipName>Addresses</relationshipName>
+    <trackTrending>false</trackTrending>
+    <type>ExternalLookup</type>
+</CustomField>

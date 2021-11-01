@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Closed</masterLabel>
+        <translation>סגורה</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Escalated</masterLabel>
+        <translation><!-- Escalated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In litigation</masterLabel>
+        <translation>בליטיגציה</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Initial Legal Data</masterLabel>
+        <translation>פנייה ראשונית למשפטית נפתחה</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New</masterLabel>
+        <translation>חדש</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting on Final Contract</masterLabel>
+        <translation>ממתין לחוזה סופי</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Working</masterLabel>
+        <translation>בעבודה</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

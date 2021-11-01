@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Utilisez « Synchroniser avec Silverpop » pour déterminer quels prospects vous voulez synchroniser avec Silverpop. Quand la case est cochée, la valeur du champ NE PEUT PAS être changée et les prospects sélectionnés seront synchronisés avec Silverpop et le seront toujours.</help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>
