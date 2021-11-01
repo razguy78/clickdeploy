@@ -1,0 +1,59 @@
+<apex:page controller="NIT_ISRAELFLOWS_CTR" showHeader="true" sidebar="true">
+	<apex:form >
+		<apex:pageMessages />
+		Example 1:
+		<br/>
+		<apex:inputText value="{!strToFind}"/>
+		<apex:commandButton value="Sosl customer search" action="{!getSoslResults}"/>
+		<br/>
+		Results:
+		<br/>
+		<apex:repeat value="{!searchList}" var="innerList">
+			<apex:repeat value="{!innerList}" var="rec">
+				Name: {!rec.Name}
+				<br/>
+				Full name: {!rec.FullName__c}
+				<br/>
+				Industry: {!rec.Industry__c}
+				<br/>
+				Description: {!rec.Description__c}
+				<br/>
+				------------------------------------------------------------
+			</apex:repeat>
+		</apex:repeat>
+		<br/>
+		<br/>
+		Select a customer:
+		<apex:inputField value="{!customerLookupSupplier.Customer__c}"/>
+		<br/>
+		<br/>
+		Example 2:
+		<br/>
+		Update selected customer form:
+		<br/>
+		<apex:inputField value="{!custToUpdate.Name}" />
+		-> Customer name
+		<br/>
+		<apex:inputField value="{!custToUpdate.FullName__c}" />
+		-> Customer full name
+		<br/>
+		<apex:inputField value="{!custToUpdate.Industry__c}" />
+		-> Industry
+		<br/>
+		<apex:inputField value="{!custToUpdate.Description__c}" />
+		-> Description
+		<br/>
+		Disable workflow (?):
+		<apex:inputField value="{!custToUpdate.disable_WF__c}" />
+		<br/>
+		<br/>
+		<apex:commandButton value="Update customer" action="{!updateCustomer}"/>
+		<br/>
+		<br/>
+		Example 3:
+		<br/>
+		Enter email here:
+		<apex:inputText value="{!inputMail}"/>
+		<apex:commandButton value="Send selected customer details to email" action="{!sendEmailWithDecryptedFields}"/>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>IBM_AccountServices__x</tabs>
+    <tabs>IBM_Balances__x</tabs>
+    <tabs>IBM_Contacts__x</tabs>
+    <tabs>IBM_Customers__x</tabs>
+    <tabs>Mobile_Voice_Record</tabs>
+    <tabs>Airlines__x</tabs>
+    <tabs>Airports__x</tabs>
+    <tabs>Categories__x</tabs>
+    <tabs>Products__x</tabs>
+    <tabs>Suppliers__x</tabs>
+    <tabs>AsyncQueryCache__c</tabs>
+</CustomApplication>

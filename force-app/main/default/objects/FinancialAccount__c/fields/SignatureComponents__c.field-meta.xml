@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignatureComponents__c</fullName>
+    <externalId>false</externalId>
+    <label>Signature Components</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hand Signature</fullName>
+                <default>false</default>
+                <label>Hand Signature</label>
+            </value>
+            <value>
+                <fullName>Automatically generated</fullName>
+                <default>false</default>
+                <label>Automatically generated</label>
+            </value>
+            <value>
+                <fullName>갇倆企伂佑가각</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>갇倆企伂佑가각</label>
+            </value>
+            <value>
+                <fullName>갇倆企伂体가각</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>갇倆企伂体가각</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

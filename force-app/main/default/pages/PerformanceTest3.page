@@ -1,0 +1,16 @@
+<apex:page controller="RemotingController">
+    <apex:includeScript value="{!$Resource.javascriptagent}"/>      
+    <input type="text" class="getThisValueSearch"></input><button onclick="doSearch();">Search</button>
+
+    <pre id="json"></pre>
+
+    <script>
+		function doSearch(){
+            RemotingController.search(document.getElementsByClassName('getThisValueSearch')[0].value,printJson);
+        }
+        function printJson(data){
+                console.log(data);
+                document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+         }
+    </script>
+</apex:page>

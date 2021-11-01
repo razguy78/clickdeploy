@@ -1,0 +1,217 @@
+<apex:page showHeader="true" sidebar="true" controller="NIT_0Enc_2ODATA_CTR">
+<head>
+	<apex:stylesheet value="{!URLFOR($Resource.lightningDesignSystem, 'assets/styles/salesforce-lightning-design-system.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.javascriptagent)}" />
+</head>
+
+<style type="text/css">
+	.space{
+		height: 30px;
+	}
+
+	.encryptedField{
+		color:red;
+	}
+
+	.odataField{
+		color:green;
+	}
+</style>
+
+<body>
+	<div>
+		 <!-- PAGE HEADER -->
+	    <div class="slds-page-header" role="banner" >
+	      <div class="slds-grid slds-grid--reverse slds-grid--align-center">
+	        <div class="slds-col slds-grid--reverse ">
+	          <h1 class="slds-text-heading--medium">{!$Label.fieldsInLDS}</h1>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- / PAGE HEADER -->
+
+	    <!-- NEW EXPENSE FORM -->
+	    <div class="slds-col slds-col--padded slds-p-top--large">
+
+	        <div class="slds-col slds-col--padded slds-p-top--large">
+          
+			    <div aria-labelledby="newexpenseform">
+			    
+			      	<!-- BOXED AREA -->
+			      	<fieldset class="slds-box slds-theme--default slds-container--small">
+			    
+				        <legend id="newexpenseform" class="slds-text-heading--small 
+				          slds-p-vertical--medium slds-text-align--right">
+				          {!$Label.customer}
+				        </legend>
+				        <!-- CREATE NEW EXPENSE FORM -->
+				        <form class="slds-form--stacked slds-text-align--right">
+				        	<div class="slds-grid">
+				        		<div class="slds-col">
+				        			<div class="slds-form-element">
+									  	<span class="slds-form-element__label">{!$Label.joinedDate}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									   		<span class="slds-form-element__static">{!customer.JoinedDate__c}</span>
+									  	</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label">{!$Label.description}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customer.Description__c}</span>
+									  	</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label">{!$Label.numberOfEmployees}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customer.NumberOfEmployees__c}</span>
+									    </div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label">{!$Label.phone}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customer.Phone__c}</span>
+										</div>
+									</div>	 
+				        		</div>
+
+
+				        		<div class="slds-col">
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.targetSector}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customerExternal.TargetSector__c}</span>
+										</div>
+									</div>	 
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.slice}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customerExternal.Slice__c}</span>
+										</div>
+									</div>	 
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.managingCustomerNumber}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customerExternal.ManagingCustomerNumber__c}</span>
+										</div>
+									</div>	 
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.businessSector}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!customerExternal.BusinessSector__c}</span>
+										</div>
+									</div>	       
+				        		</div>
+				        	</div>
+				       	</form>
+			        <!-- / CREATE NEW EXPENSE FORM -->
+			      	</fieldset>
+
+			      	<div class="space">
+					</div>
+
+					<fieldset class="slds-box slds-theme--default slds-container--small">
+			    
+				        <legend id="newexpenseform" class="slds-text-heading--small 
+				          slds-p-vertical--medium slds-text-align--right">
+				          {!$Label.contact}
+				        </legend>
+				        <!-- CREATE NEW EXPENSE FORM -->
+				        <form class="slds-form--stacked slds-text-align--right">
+					        <div class="slds-grid">
+					        	<div class="slds-col">
+						          	<div class="slds-form-element">
+									  	<span class="slds-form-element__label">{!$Label.firstName}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contact.FirstName}</span>
+										</div>
+									</div>
+
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.bankingType}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contactExternal.BankingType__c}</span>
+										</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.age}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contactExternal.Age__c}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="slds-col">
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.countryOfResidency}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contactExternal.CountryOfResidency__c}</span>
+										</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.englishFirstName}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contactExternal.EnglishFirstName__c}</span>
+										</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label odataField">{!$Label.englishLastName}</span>
+									  	<div class="slds-form-element__control slds-has-divider--bottom">
+									    	<span class="slds-form-element__static">{!contactExternal.EnglishLastName__c}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+				        </form>
+			        <!-- / CREATE NEW EXPENSE FORM -->
+			      	</fieldset>
+
+      <!-- / BOXED AREA -->
+    			</div>
+    <!-- / CREATE NEW EXPENSE -->
+			</div>
+	    <!-- / NEW EXPENSE FORM -->
+		</div>
+	</div>
+
+	<div class="space">
+	</div>
+
+
+	<apex:form style="text-align:right">
+		<apex:pageBlock title="{!$Label.fieldsInVF}">
+			<apex:pageBlockSection title="{!$Label.customer}">
+				<apex:outputField value="{!customer.JoinedDate__c}" />
+				<apex:outputField value="{!customer.Description__c}" />
+				<apex:outputField value="{!customer.NumberOfEmployees__c}" />
+				<apex:outputField value="{!customer.Phone__c}" />
+
+				<apex:outputField value="{!customerExternal.TargetSector__c}"/>
+				<apex:outputField value="{!customerExternal.Slice__c}" />
+				<apex:outputField value="{!customerExternal.ManagingCustomerNumber__c}"/>
+				<apex:outputField value="{!customerExternal.BusinessSector__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="{!$Label.contact}">
+				<apex:outputField value="{!contact.FirstName}" />
+
+				<apex:outputField value="{!contactExternal.BankingType__c}" />
+				<apex:outputField value="{!contactExternal.Age__c}"/>
+				<apex:outputField value="{!contactExternal.CountryOfResidency__c}"/>
+				<apex:outputField value="{!contactExternal.EnglishFirstName__c}"/>
+				<apex:outputField value="{!contactExternal.EnglishLastName__c}"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+		
+</body>
+
+</apex:page>

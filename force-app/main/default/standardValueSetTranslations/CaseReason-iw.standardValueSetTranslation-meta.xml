@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Breakdown</masterLabel>
+        <translation><!-- Breakdown --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Complexity</masterLabel>
+        <translation><!-- Equipment Complexity --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Design</masterLabel>
+        <translation><!-- Equipment Design --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>FATCA</masterLabel>
+        <translation>FATCA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Feedback</masterLabel>
+        <translation><!-- Feedback --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fraud</masterLabel>
+        <translation>מרמה</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Installation</masterLabel>
+        <translation><!-- Installation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Legal entity documents</masterLabel>
+        <translation>מסמכי הקמת תאגיד</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Loan documents</masterLabel>
+        <translation>מסמכי בקשת אשראי</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>אחר</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Performance</masterLabel>
+        <translation><!-- Performance --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

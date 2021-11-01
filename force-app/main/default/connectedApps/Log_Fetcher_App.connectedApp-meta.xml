@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>nazenkut@salesforce.com</contactEmail>
+    <label>Log Fetcher App</label>
+    <oauthConfig>
+        <callbackUrl>https://bnhp-lab-4-dev-ed.my.salesforce.com/services/oauth2/callback</callbackUrl>
+        <certificate>MIIDBzCCAe+gAwIBAgIJAMpGx9qOj1gwMA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNVBAMMD25hb3JlLmhhcnRhLmNvbTAeFw0xODExMjUwODQ2MjJaFw0yODExMjIwODQ2MjJaMBoxGDAWBgNVBAMMD25hb3JlLmhhcnRhLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOYh0pKcy6ofpg/8xxREGEe82DWze47E0R6akkpgOhYrQVNcVjd+wMdSEoooC3Ao4SRedn72k/MUi9YfCFCh//GF9urIfSHGveFgtWhdzjwAobmnTHqdHkpUyXpuo1uPHfSCCFfO9tInY4nJ05L9Zkh25RyeQlKFjUs6Klotam5QeKP8uzeBhfTgCbNf5p/3x2FKklndcG+fDdPXv5ZzblEgcm0B6z3upVvoGDUiVtkU92pUjE/24k1iqVhJwxuyYCTVRclWf2Kg0APC7LC6aJkNzKsyNUwUUhz1wYprEmXR7EMpoetIJnXDvrupTVPwFSpHm+UdvNdeCyIpABAwn+0CAwEAAaNQME4wHQYDVR0OBBYEFGLSXRrhpAtFAbc7HXs0DlqAkQ1UMB8GA1UdIwQYMBaAFGLSXRrhpAtFAbc7HXs0DlqAkQ1UMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAHXc7Caz7EwwzAQk01acEFUhULOgvjH/7rMg9RzRelWm/xzX6T09kjCmvzlatTEngTvOFI0PbeGMqXtocT7pgUoopM7tIvsxPB27wC+XFHv4+8+umK0+MYk2b9nsU9qOsLDVNgkVED+733Jejh5a26T4Q0AIDjnia/0f7DvAdlcmjTdBo1Cnlj6ANEVQzzW7yYXiosVGKWXK4mlTniJDybQgghRGzqoIxtoacPxKl6uYHgcMFfv6qIV3scRUrztm7P/0cmRWSsscpG0SwZ7liOjO7xxbaSKKaQamC6aIpx/kQS7jcmb6hNv5l4GSYkHv8D5IQtdc5KtKYEk2rIFAAKQ=</certificate>
+        <consumerKey>3MVG9HxRZv05HarS_kOxe86PSR65UJXzq74nXzJ0Vq7j7Ph6h2Gz9huyNikhX.r4ynyibaNNGEBesj2MU7iW2</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>true</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

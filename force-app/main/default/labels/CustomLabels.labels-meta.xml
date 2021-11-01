@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>GUID</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>GUID</shortDescription>
+        <value>מזהה חיצוני</value>
+    </labels>
+    <labels>
+        <fullName>IDNumber</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>IDNumber</shortDescription>
+        <value>מספר ת.ז</value>
+    </labels>
+    <labels>
+        <fullName>Run_read_batch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Run read batch</shortDescription>
+        <value>Run read batch</value>
+    </labels>
+    <labels>
+        <fullName>Run_write_batch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Run write batch</shortDescription>
+        <value>Run write batch</value>
+    </labels>
+    <labels>
+        <fullName>accountName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>accountName</shortDescription>
+        <value>שם  חשבון</value>
+    </labels>
+    <labels>
+        <fullName>accountNumber</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>accountNumber</shortDescription>
+        <value>מספר חשבון</value>
+    </labels>
+    <labels>
+        <fullName>accountOpenedOn</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>accountOpenedOn</shortDescription>
+        <value>תאריך פתיחת חשבון</value>
+    </labels>
+    <labels>
+        <fullName>accountType</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>accountType</shortDescription>
+        <value>סוג חשבון</value>
+    </labels>
+    <labels>
+        <fullName>activityStatusUpdateDate</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>activityStatusUpdateDate</shortDescription>
+        <value>תאריך עדכון סטטוס פעילות</value>
+    </labels>
+    <labels>
+        <fullName>address</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>address</shortDescription>
+        <value>כתובת</value>
+    </labels>
+    <labels>
+        <fullName>age</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>age</shortDescription>
+        <value>גיל</value>
+    </labels>
+    <labels>
+        <fullName>annualRevenue</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>annualRevenue</shortDescription>
+        <value>מחזור שנתי</value>
+    </labels>
+    <labels>
+        <fullName>bankingType</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>bankingType</shortDescription>
+        <value>סוג בנקאות</value>
+    </labels>
+    <labels>
+        <fullName>birthdate</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>birthdate</shortDescription>
+        <value>תאריך לידה</value>
+    </labels>
+    <labels>
+        <fullName>branch</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>branch</shortDescription>
+        <value>סניף</value>
+    </labels>
+    <labels>
+        <fullName>buisnessDomain</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>buisnessDomain</shortDescription>
+        <value>תחום עיסוק</value>
+    </labels>
+    <labels>
+        <fullName>businessSector</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>businessSector</shortDescription>
+        <value>ענף משק</value>
+    </labels>
+    <labels>
+        <fullName>ceaseActivityDate</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>ceaseActivityDate</shortDescription>
+        <value>תאריך הפסקת פעילות</value>
+    </labels>
+    <labels>
+        <fullName>city</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>city</shortDescription>
+        <value>עיר</value>
+    </labels>
+    <labels>
+        <fullName>companyStartedDate</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>companyStartedDate</shortDescription>
+        <value>תאריך הקמת חברה</value>
+    </labels>
+    <labels>
+        <fullName>contact</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>contact</shortDescription>
+        <value>איש קשר</value>
+    </labels>
+    <labels>
+        <fullName>country</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>country</shortDescription>
+        <value>מדינה</value>
+    </labels>
+    <labels>
+        <fullName>countryOfResidency</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>countryOfResidency</shortDescription>
+        <value>ארץ תושבות</value>
+    </labels>
+    <labels>
+        <fullName>customer</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>customer</shortDescription>
+        <value>לקוח</value>
+    </labels>
+    <labels>
+        <fullName>description</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>description</shortDescription>
+        <value>תיאור</value>
+    </labels>
+    <labels>
+        <fullName>disable_WF</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>disable_WF</shortDescription>
+        <value>Disable Workflow</value>
+    </labels>
+    <labels>
+        <fullName>englishFirstName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>englishFirstName</shortDescription>
+        <value>שם פרטי לועזי</value>
+    </labels>
+    <labels>
+        <fullName>englishLastName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>englishLastName</shortDescription>
+        <value>שם משפחה לועזי</value>
+    </labels>
+    <labels>
+        <fullName>fieldsInLDS</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>fieldsInLDS</shortDescription>
+        <value>השדות מוצגים בעיצוב Lightning</value>
+    </labels>
+    <labels>
+        <fullName>fieldsInVF</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>fieldsInVF</shortDescription>
+        <value>השדות מוצגים בעיצוב קלאסי</value>
+    </labels>
+    <labels>
+        <fullName>financialAccount</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>financialAccount</shortDescription>
+        <value>חשבון פיננסי</value>
+    </labels>
+    <labels>
+        <fullName>firstName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>firstName</shortDescription>
+        <value>שם פרטי</value>
+    </labels>
+    <labels>
+        <fullName>fullBranchNumber</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>fullBranchNumber</shortDescription>
+        <value>מספר חשבון מלא</value>
+    </labels>
+    <labels>
+        <fullName>fullName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>fullName</shortDescription>
+        <value>שם  לקוח</value>
+    </labels>
+    <labels>
+        <fullName>gender</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>gender</shortDescription>
+        <value>מגדר</value>
+    </labels>
+    <labels>
+        <fullName>joinedDate</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>joinedDate</shortDescription>
+        <value>תאריך הצטרפות</value>
+    </labels>
+    <labels>
+        <fullName>lastName</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>lastName</shortDescription>
+        <value>שם משפחה</value>
+    </labels>
+    <labels>
+        <fullName>managingCustomerNumber</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>managingCustomerNumber</shortDescription>
+        <value>מספר לקוח מנהלי</value>
+    </labels>
+    <labels>
+        <fullName>numberOfEmployees</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>numberOfEmployees</shortDescription>
+        <value>מספר עובדים</value>
+    </labels>
+    <labels>
+        <fullName>phone</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>phone</shortDescription>
+        <value>טלפון</value>
+    </labels>
+    <labels>
+        <fullName>postalCode</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>postalCode</shortDescription>
+        <value>מיקוד</value>
+    </labels>
+    <labels>
+        <fullName>run_batch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>run batch</shortDescription>
+        <value>Run Batch</value>
+    </labels>
+    <labels>
+        <fullName>save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>signatureComponentCode</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>signatureComponentCode</shortDescription>
+        <value>קוד הרכב חתימה</value>
+    </labels>
+    <labels>
+        <fullName>signatureComponents</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>signatureComponents</shortDescription>
+        <value>הרכב חתימה</value>
+    </labels>
+    <labels>
+        <fullName>slice</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>slice</shortDescription>
+        <value>פלח</value>
+    </labels>
+    <labels>
+        <fullName>status</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>status</shortDescription>
+        <value>סטאטוס</value>
+    </labels>
+    <labels>
+        <fullName>street</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>street</shortDescription>
+        <value>רחוב</value>
+    </labels>
+    <labels>
+        <fullName>targetSector</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>targetSector</shortDescription>
+        <value>מגזרי יעד</value>
+    </labels>
+    <labels>
+        <fullName>type</fullName>
+        <language>iw</language>
+        <protected>true</protected>
+        <shortDescription>type</shortDescription>
+        <value>סוג</value>
+    </labels>
+    <labels>
+        <fullName>updateContact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>updateContact</shortDescription>
+        <value>Update Contact</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>grazsilbiger@salesforce.com</contactEmail>
+    <label>Dev Key Rotation</label>
+    <oauthConfig>
+        <callbackUrl>https://bnhp-lab-4-dev-ed.my.salesforce.com/services/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG9HxRZv05HarS_kOxe86PSR1foMsMw_LCKRPdUyVdjuTeNoj.ABT5l81Bqv16myQr5AN9UbhXDW5FxqPQ0</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

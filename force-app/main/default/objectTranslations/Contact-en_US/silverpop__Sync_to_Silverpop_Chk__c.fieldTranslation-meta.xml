@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Use &quot;Sync to Silverpop&quot; to determine which contacts you want to sync with Silverpop. When the box is checked, the field value CANNOT be changed, the selected contacts will be synced to Silverpop and will always sync. --></help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>

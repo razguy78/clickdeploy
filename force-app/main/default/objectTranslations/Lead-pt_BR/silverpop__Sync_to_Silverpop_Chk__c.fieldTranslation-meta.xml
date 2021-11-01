@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Use “Sincronizar com a Silverpop” para determinar quais as oportunidades de vendas que deseja sincronizar com a Silverpop. Quando a caixa estiver marcada, o valor do campo NÃO PODE ser alterado, as oportunidades de vendas selecionadas serão sincronizadas com a Silverpop e sempre serão sincronizadas.</help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>

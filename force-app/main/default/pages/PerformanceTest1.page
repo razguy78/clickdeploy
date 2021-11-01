@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:includeScript value="{!$Resource.javascriptagent}"/>      
+
+    <apex:enhancedList type="Contact" height="300" rowsPerPage="50" id="djf4f9jefsef4" />
+</apex:page>

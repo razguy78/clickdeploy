@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Consultation</masterLabel>
+        <translation>התייעצות משפטית</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Electrical</masterLabel>
+        <translation><!-- Electrical --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Electronic</masterLabel>
+        <translation><!-- Electronic --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Legal Documents</masterLabel>
+        <translation>מסמכים משפטיים</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mechanical</masterLabel>
+        <translation><!-- Mechanical --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Structural</masterLabel>
+        <translation><!-- Structural --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>
