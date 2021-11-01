@@ -2,7 +2,7 @@
 * Written By: Naore Azenkut @ 5th Dec 2016
 * Use: Performance tests only. this is not production code.
 */
-public class RemotingController {
+public without sharing class RemotingController {
 	
     @remoteAction
     @readOnly

@@ -1,5 +1,5 @@
 // Allow customization of the content Download experience
-public class ContentDownloadHandlerFactoryImpl implements Sfc.ContentDownloadHandlerFactory {
+public without sharing class ContentDownloadHandlerFactoryImpl implements Sfc.ContentDownloadHandlerFactory {
 
 public Sfc.ContentDownloadHandler getContentDownloadHandler(List<ID> ids, Sfc.ContentDownloadContext context) {
     Sfc.ContentDownloadHandler contentDownloadHandler = new Sfc.ContentDownloadHandler();
