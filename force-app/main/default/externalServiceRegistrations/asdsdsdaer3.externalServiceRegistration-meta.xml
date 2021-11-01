@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>asdsdsdaer3</label>
+    <namedCredential>AsciiArtAPI</namedCredential>
+    <schema>{
+  &quot;swagger&quot; : &quot;2.0&quot;,
+  &quot;info&quot; : {
+    &quot;description&quot; : &quot;defaultDescription&quot;,
+    &quot;version&quot; : &quot;0.1&quot;,
+    &quot;title&quot; : &quot;defaultTitle&quot;
+  },
+  &quot;paths&quot; : {
+    &quot;/someRelativePath&quot; : {
+      &quot;post&quot; : {
+        &quot;consumes&quot; : [ &quot;application/json&quot; ],
+        &quot;parameters&quot; : [ {
+          &quot;name&quot; : &quot;a&quot;,
+          &quot;in&quot; : &quot;query&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;1&quot;
+        }, {
+          &quot;name&quot; : &quot;b&quot;,
+          &quot;in&quot; : &quot;query&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;2&quot;
+        }, {
+          &quot;name&quot; : &quot;c&quot;,
+          &quot;in&quot; : &quot;query&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;3&quot;
+        }, {
+          &quot;name&quot; : &quot;Accept&quot;,
+          &quot;in&quot; : &quot;header&quot;,
+          &quot;description&quot; : &quot;Generated header parameter. Example value =&apos;application/json&apos;&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;application/json&quot;
+        }, {
+          &quot;name&quot; : &quot;h1&quot;,
+          &quot;in&quot; : &quot;header&quot;,
+          &quot;description&quot; : &quot;Generated header parameter. Example value =&apos;vh1&apos;&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;vh1&quot;
+        } ],
+        &quot;responses&quot; : {
+          &quot;default&quot; : {
+            &quot;description&quot; : &quot;Definition generated from Swagger Inspector&quot;
+          }
+        }
+      }
+    }
+  },
+  &quot;definitions&quot; : { }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <status>Complete</status>
+</ExternalServiceRegistration>

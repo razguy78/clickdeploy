@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>הפנייה</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>פניה</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>הפנייות</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>פניות</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Legal Support</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>שלח פנייה למשפטית</label>
+        <name>Send_Legal_Mail</name>
+    </quickActions>
+    <recordTypes>
+        <label>פניית לקוח</label>
+        <name>Customer_Support</name>
+    </recordTypes>
+    <recordTypes>
+        <label>פנייה למשפטית</label>
+        <name>Legal_Council_Support</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- UpsellCrosssellOpportunity --></label>
+        <name>UpsellCrosssellOpportunity</name>
+    </webLinks>
+</CustomObjectTranslation>

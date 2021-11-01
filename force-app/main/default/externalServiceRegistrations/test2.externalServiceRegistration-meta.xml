@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>test2</label>
+    <namedCredential>TrustAPI</namedCredential>
+    <operations>
+        <active>true</active>
+        <name>getbine1b54dc2x2ddf5dx2d479bx2dbaa8x2db83976141327view</name>
+    </operations>
+    <schema>{
+  &quot;swagger&quot; : &quot;2.0&quot;,
+  &quot;info&quot; : {
+    &quot;description&quot; : &quot;defaultDescription&quot;,
+    &quot;version&quot; : &quot;0.1&quot;,
+    &quot;title&quot; : &quot;defaultTitle&quot;
+  },
+  &quot;paths&quot; : {
+    &quot;/bin/e1b54dc2-df5d-479b-baa8-b83976141327/view&quot; : {
+      &quot;get&quot; : {
+        &quot;parameters&quot; : [ {
+          &quot;name&quot; : &quot;a&quot;,
+          &quot;in&quot; : &quot;query&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;1&quot;
+        }, {
+          &quot;name&quot; : &quot;b&quot;,
+          &quot;in&quot; : &quot;query&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;2&quot;
+        }, {
+          &quot;name&quot; : &quot;h1&quot;,
+          &quot;in&quot; : &quot;header&quot;,
+          &quot;description&quot; : &quot;Generated header parameter. Example value =&apos;hv1&apos;&quot;,
+          &quot;required&quot; : false,
+          &quot;type&quot; : &quot;string&quot;,
+          &quot;x-example&quot; : &quot;hv1&quot;
+        } ],
+        &quot;responses&quot; : {
+          &quot;default&quot; : {
+            &quot;description&quot; : &quot;Definition generated from Swagger Inspector&quot;
+          }
+        }
+      }
+    }
+  },
+  &quot;definitions&quot; : { }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <status>Complete</status>
+</ExternalServiceRegistration>

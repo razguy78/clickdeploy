@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Call_Asciii_service</name>
+        <label>Call Asciii service</label>
+        <locationX>95</locationX>
+        <locationY>239</locationY>
+        <actionName>AsciiArtAPIServ_asciiart__Service</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Show_Result</targetReference>
+        </connector>
+        <inputParameters>
+            <name>asciiart_input_message</name>
+            <value>
+                <elementReference>Text_to_transform</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>rawres</assignToReference>
+            <name>ASCIIArtResponse_art</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>asciiFlowt1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>asciiFlowt1</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Enter_Text</name>
+        <label>Enter Text</label>
+        <locationX>93</locationX>
+        <locationY>60</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Call_Asciii_service</targetReference>
+        </connector>
+        <fields>
+            <name>Text_to_transform</name>
+            <dataType>String</dataType>
+            <fieldText>Text to transform</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Show_Result</name>
+        <label>Show Result</label>
+        <locationX>90</locationX>
+        <locationY>382</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ASCIIRes</name>
+            <fieldText>&lt;pre&gt;&lt;code&gt;{!rawres}&lt;/code&gt;&lt;/pre&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Enter_Text</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>rawres</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

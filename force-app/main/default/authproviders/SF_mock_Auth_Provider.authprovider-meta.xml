@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>3MVG9HxRZv05HarS_kOxe86PSR2rYfV9NFmBNALBaSv2zwxBWz4moaRCsrpJteR3XY4vbCiyEGA_vt0FOox3B</consumerKey>
+    <consumerSecret>G+QhNpTxFU80xnqcbtwMufj6GrydnHQZ</consumerSecret>
+    <defaultScopes>All</defaultScopes>
+    <friendlyName>SF mock Auth Provider</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+</AuthProvider>

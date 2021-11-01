@@ -1,0 +1,382 @@
+<apex:page controller="NIT_POC_Tests_CTRL" showHeader="true" sidebar="true">
+    <head>
+        <apex:includeScript value="{!URLFOR($Resource.javascriptagent)}" />
+    </head>
+    <apex:form >
+		<apex:pageMessages />
+		Example 1: SOSL Check - Enter value (Example is Customer name)
+        <br/>
+        (Result : Name,Full Name, Industry , Description)
+		<br/>
+		<apex:inputText value="{!strToFind}"/>
+		<apex:commandButton value="Sosl customer search" action="{!getSoslResults}"/>
+		<br/>
+		Results:
+		<br/>
+		<apex:repeat value="{!searchList}" var="innerList">
+			<apex:repeat value="{!innerList}" var="rec">
+				Name: {!rec.Name}
+				<br/>
+				Full name: {!rec.FullName__c}
+				<br/>
+				Industry: {!rec.Industry__c}
+				<br/>
+				Description: {!rec.Description__c}
+				<br/>
+				------------------------------------------------------------
+			</apex:repeat>
+		</apex:repeat>
+		<br/>
+		<br/>
+        Example 2:
+        <br/>
+		Select a customer:
+		<apex:inputField value="{!customerLookupSupplier.Customer__c}" onchange="popCustomerValuesFunction();"/>
+		<br/>
+		<br/>
+		Example 2:
+		<br/>
+		Update selected customer form:
+		<br/>
+		<apex:inputField value="{!custToUpdate.Name}" />
+		-> Customer name
+		<br/>
+		<apex:inputField value="{!custToUpdate.FullName__c}" />
+		-> Customer full name
+		<br/>
+		<apex:inputField value="{!custToUpdate.Industry__c}" />
+		-> Industry
+		<br/>
+		<apex:inputField value="{!custToUpdate.Description__c}" />
+		-> Description
+		<br/>
+		Disable workflow (?):
+		<apex:inputField value="{!custToUpdate.disable_WF__c}" />
+		<br/>
+		<br/>
+		<apex:commandButton value="Update customer" action="{!updateCustomer}"/>
+		<br/>
+		<br/>
+		Example 3:
+		<br/>
+		Enter email here:
+		<apex:inputText value="{!inputMail}"/>
+		<apex:commandButton value="Send selected customer details to email" action="{!sendEmailWithDecryptedFields}"/>
+		<br/>
+		<br/>
+			<apex:selectRadio value="{!endpointForWebService}">
+            	<apex:selectOptions value="{!Items}"/>
+            </apex:selectRadio>
+		<br/>
+		<apex:commandButton value="REST API Read" action="{!rest_API_Read_Method}"/>
+		<br/>
+		<apex:outputPanel id="REST_API_Read_ResultsId">
+			Results:
+			<apex:outputText value="{!restApiReadResultsBody}"/>
+		</apex:outputPanel>
+		<apex:actionFunction action="{!popCustomerValues}" name="popCustomerValuesFunction"/>
+	</apex:form> 
+
+	<br/>
+	<br/>
+
+	<head>
+	<apex:stylesheet value="{!URLFOR($Resource.lightningDesignSystem, 'assets/styles/salesforce-lightning-design-system.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.javascriptagent)}" />
+</head>
+
+<style type="text/css">
+	.space{
+		height: 30px;
+	}
+
+	.encryptedField{
+		color:red;
+	}
+
+	.checkboxText{
+		text-align: center;
+	}
+</style>
+	
+<body>
+	<apex:remoteObjects jsNamespace="RemoteObjectModel">
+	    <apex:remoteObjectModel name="Contact" fields="Id,FirstName,LastName,Gender__c,GUID__c,disable_WF__c"/>
+	</apex:remoteObjects>
+
+	<apex:form id="formId">
+		<apex:actionFunction action="{!runReadBatch}" name="callReadBatch"/>
+		<apex:actionFunction action="{!runWriteBatch}" name="callWriteBatch"/>
+
+		<!-- Must render something on the page in order to activate the update on the server -->
+		<apex:actionFunction action="{!updateCustomer}" name="updateCustomer" reRender="formId">
+			<apex:param name="DataToUpdate" value="" assignto="{!dataToUpdate}" />
+		</apex:actionFunction>
+	</apex:form>
+
+ <!-- PAGE HEADER -->
+    <div class="slds-page-header" role="banner" >
+      <div class="slds-grid slds-grid--reverse slds-grid--align-center">
+        <div class="slds-col slds-grid--reverse ">
+          <h1 class="slds-text-heading--medium">{!$Label.run_batch}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="space" />
+
+	<div>
+		<input type="button" class="slds-button slds-button--neutral" value="{!$Label.Run_read_batch}" onclick="runReadBatch();" />
+	</div>
+
+	<div class="space" />
+
+	<div>
+		<input type="button" class="slds-button slds-button--neutral" value="{!$Label.Run_write_batch}" onclick="runWriteBatch();" />
+	</div>
+
+	<div class="space" />
+
+	<div>
+		 <!-- PAGE HEADER -->
+	    <div class="slds-page-header" role="banner" >
+	      <div class="slds-grid slds-grid--reverse slds-grid--align-center">
+	        <div class="slds-col slds-grid--reverse ">
+	          <h1 class="slds-text-heading--medium">{!$Label.updateContact}</h1>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- / PAGE HEADER -->
+
+	    <!-- NEW EXPENSE FORM -->
+	    <div class="slds-col slds-col--padded slds-p-top--large">
+
+	        <div class="slds-col slds-col--padded slds-p-top--large">
+          
+			    <div aria-labelledby="newexpenseform">
+			    
+			      	<!-- BOXED AREA -->
+			      	<fieldset class="slds-box slds-theme--default slds-container--small">
+			    
+				        <legend id="newexpenseform" class="slds-text-heading--small 
+				          slds-p-vertical--medium slds-text-align--right">
+				          {!$Label.customer}
+				        </legend>
+				        <!-- CREATE NEW EXPENSE FORM -->
+				        <form class="slds-form--stacked slds-text-align--right">
+				        	<div class="slds-grid">
+				        		<div class="slds-col">
+									<div class="slds-form-element">
+									  <label class="slds-form-element__label" for="{!$Label.description}">{!$Label.description}</label>
+									  <div class="slds-form-element__control">
+									    <input class="slds-input" id="customerDescription" type="text" value="{!customer.Description__c}" />
+									  </div>
+									</div>
+
+									<div class="slds-form-element">
+									  <label class="slds-form-element__label" for="{!$Label.numberOfEmployees}">{!$Label.numberOfEmployees}</label>
+									  <div class="slds-form-element__control">
+									    <input class="slds-input" id="customerNumberOfEmployees" type="text" value="{!customer.NumberOfEmployees__c}" />
+									  </div>
+									</div> 
+
+									<div class="slds-form-element">
+									  <label class="slds-form-element__label" for="{!$Label.phone}">{!$Label.phone}</label>
+									  <div class="slds-form-element__control">
+									    <input class="slds-input" id="customerPhone" type="text" value="{!customer.Phone__c}" />
+									  </div>
+									</div>
+				        		</div>
+
+				        		<div class="slds-col">
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label encryptedField" for="{!$Label.fullName}">{!$Label.fullName}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="customerFullName" type="text" value="{!customer.FullName__c}" />
+										</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label encryptedField" for="{!$Label.annualRevenue}">{!$Label.annualRevenue}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="customerAnnualRevenue" type="text" value="{!customer.AnnualRevenue__c}" />
+										</div>
+									</div>
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label encryptedField" for="{!$Label.buisnessDomain}">{!$Label.buisnessDomain}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="customerIndustry" type="text" value="{!customer.Industry__c}" />
+										</div>
+									</div>
+
+									<div class="slds-form-element checkboxText">
+										<span class="slds-form-element__label" for="{!$Label.buisnessDomain}">{!$Label.disable_WF}</span>
+										<div class="slds-form-element__control">
+						              		<input type="checkbox" class="slds-checkbox" id="customerDisable_WF" labelClass="slds-form-element__label" value="{!customer.disable_WF__c}"/>
+						              	</div>
+						          	</div>
+						    
+						          	<div class="slds-form-element">
+						         		<input type="button" class="slds-button slds-button--neutral" value="{!$Label.save}" onclick="saveCustomer();" />
+						         	</div>
+						        </div>
+				        	</div>
+				       	</form>
+			        <!-- / CREATE NEW EXPENSE FORM -->
+			      	</fieldset>
+
+			      	<div class="space">
+					</div>
+
+					<fieldset class="slds-box slds-theme--default slds-container--small">
+			    
+				        <legend id="newexpenseform" class="slds-text-heading--small 
+				          slds-p-vertical--medium slds-text-align--right">
+				          {!$Label.contact}
+				        </legend>
+				        <!-- CREATE NEW EXPENSE FORM -->
+				        <form class="slds-form--stacked slds-text-align--right">
+					        <div class="slds-grid">
+					        	<div class="slds-col">
+					        		<div class="slds-form-element">
+									  	<span class="slds-form-element__label" for="{!$Label.firstName}">{!$Label.firstName}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="contactFirstName" type="text" value="{!contact.FirstName}" />
+										</div>
+									</div>		
+
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label" for="{!$Label.lastName}">{!$Label.lastName}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="contactLastName" type="text" value="{!contact.LastName}" />
+										</div>
+									</div>						         
+								</div>
+
+								<div class="slds-col">
+									<div class="slds-form-element">
+									  	<span class="slds-form-element__label encryptedField" for="{!$Label.gender}">{!$Label.gender}</span>
+									  	<div class="slds-form-element__control">
+									  		<input class="slds-input" id="contactGender" type="text" value="{!contact.Gender__c}" />
+										</div>
+									</div>	
+
+									<div class="slds-form-element">
+									  <label class="slds-form-element__label encryptedField" for="{!$Label.GUID}">{!$Label.GUID}</label>
+									  <div class="slds-form-element__control">
+									    <input class="slds-input" id="contactGUID" type="text" value="{!contact.GUID__c}" />
+									  </div>
+									</div> 
+
+									<div class="slds-form-element">
+										<span class="slds-form-element__label" for="{!$Label.buisnessDomain}">{!$Label.disable_WF}</span>
+										<div class="slds-form-element__control">
+						              		<input type="checkbox" class="slds-checkbox" id="customerdisable_WF" labelClass="slds-form-element__label" value="{!contact.disable_WF__c}"/>
+						              	</div>
+						          	</div>
+						    
+						          	<div class="slds-form-element">
+						         		<input type="button" class="slds-button slds-button--neutral" value="{!$Label.save}" onclick="updateContact();" />
+						         	</div>
+
+						         	<input type="hidden" id="contactId" value="{!contact.Id}" />
+					         	</div>
+							</div>
+				        </form>
+			        <!-- / CREATE NEW EXPENSE FORM -->
+			      	</fieldset>
+
+      <!-- / BOXED AREA -->
+    			</div>
+    <!-- / CREATE NEW EXPENSE -->
+			</div>
+	    <!-- / NEW EXPENSE FORM -->
+		</div>
+	</div>
+
+<script type="text/javascript">
+	function runReadBatch() {
+		callReadBatch();
+		alert('Activated Batch');
+	}
+
+	function runWriteBatch() {
+		callWriteBatch();
+		alert('Activated Batch');
+	}
+
+	//ActionFunction
+	function saveCustomer() {
+		objectToUpdate = buildObject('customer');
+		var DataToUpdate = JSON.stringify(objectToUpdate);
+		updateCustomer(DataToUpdate);
+		alert('Customer been updated');
+	}
+
+	//RemoteAction
+	// two wats to call remoteAction, doesn't work because "No such column 'attributes' on sobject of type Contact" - in the Netwrok it shows that it doesn't send the object with the attribute type first
+	function saveContact() {
+		var objectToUpdate = buildObject('contact');
+		 
+		NIT_POC_Tests_CTRL.updateContact2(objectToUpdate, function(result, event){
+			console.log('result: ', result);
+			alert('Contact been updated: ');
+		});
+	}
+
+	//RemoteObject 
+	//instead of building the object could use the object returned from the function buildObject(objectType)
+	function updateContact() {
+	    var record = new RemoteObjectModel.Contact({
+	        Id 						: document.getElementById('contactId').value, 
+			FirstName 				: document.getElementById('contactFirstName').value,
+			LastName 				: document.getElementById('contactLastName').value,
+			Gender__c 				: document.getElementById('contactGender').value,
+			GUID__c 				: document.getElementById('contactGUID').value,
+			disable_WF__c 			: document.getElementById('customerdisable_WF').checked
+	    });
+	    record.update(updateCallback);
+	}
+
+	// Callback to handle DML Remote Objects calls
+	function updateCallback(err, ids){
+	    if (err) { 
+	        displayError(err); 
+	    } else {
+	       alert('Contact been updated: ');
+	    }
+	}
+
+
+	function buildObject(objectType){
+		var objectToUpdate;
+		if(objectType == 'customer'){
+			objectToUpdate = {
+				Description__c 			: document.getElementById('customerDescription').value,
+				NumberOfEmployees__c 	: document.getElementById('customerNumberOfEmployees').value,
+				Phone__c 				: document.getElementById('customerPhone').value,
+				FullName__c 			: document.getElementById('customerFullName').value,
+				AnnualRevenue__c	 	: document.getElementById('customerAnnualRevenue').value,
+				Industry__c 			: document.getElementById('customerIndustry').value,
+				disable_WF__c 			: document.getElementById('customerDisable_WF').checked
+			} 
+		}
+		if(objectType == 'contact'){
+			objectToUpdate = {
+				attributes 				: {type:'Contact'},
+				Id 						: document.getElementById('contactId').value, 
+				FirstName 				: document.getElementById('contactFirstName').value,
+				LastName 				: document.getElementById('contactLastName').value,
+				Gender__c 				: document.getElementById('contactGender').value,
+				GUID__c 				: document.getElementById('contactGUID').value,
+				disable_WF__c 			: document.getElementById('customerdisable_WF').checked
+			} 
+		}
+		return objectToUpdate;
+	}
+</script>
+
+</body>
+</apex:page>

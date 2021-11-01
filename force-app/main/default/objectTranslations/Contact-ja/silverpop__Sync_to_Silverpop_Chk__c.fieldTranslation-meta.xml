@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>[Silverpopと同期] を使用して、Silverpopと同期する連絡先を指定します。このチェックボックスを選択すると、フィールドの値を変更できません。選択した連絡先とSilverpopとの同期が行われ、常に同期状態が維持されます。</help>
+    <label><!-- Sync to Silverpop --></label>
+    <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- בדיקות פונקציונאליות - מעבדה --></label>
+        <name>FunctionalTests_Lab</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- בדיקות ביצועים 360 לקוח --></label>
+        <name>X360</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- myconsole --></label>
+        <name>myconsole</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- GUID --></label>
+        <name>GUID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- IDNumber --></label>
+        <name>IDNumber</name>
+    </customLabels>
+    <customLabels>
+        <label>תריץ באט&apos;ץ קריאה</label>
+        <name>Run_read_batch</name>
+    </customLabels>
+    <customLabels>
+        <label>הרץ באט&apos;ץ כתיבה</label>
+        <name>Run_write_batch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- accountName --></label>
+        <name>accountName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- accountNumber --></label>
+        <name>accountNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- accountOpenedOn --></label>
+        <name>accountOpenedOn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- accountType --></label>
+        <name>accountType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- activityStatusUpdateDate --></label>
+        <name>activityStatusUpdateDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- address --></label>
+        <name>address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- age --></label>
+        <name>age</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- annualRevenue --></label>
+        <name>annualRevenue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- bankingType --></label>
+        <name>bankingType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- birthdate --></label>
+        <name>birthdate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- branch --></label>
+        <name>branch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- buisnessDomain --></label>
+        <name>buisnessDomain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- businessSector --></label>
+        <name>businessSector</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ceaseActivityDate --></label>
+        <name>ceaseActivityDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- city --></label>
+        <name>city</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- companyStartedDate --></label>
+        <name>companyStartedDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- contact --></label>
+        <name>contact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- country --></label>
+        <name>country</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- countryOfResidency --></label>
+        <name>countryOfResidency</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- customer --></label>
+        <name>customer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- description --></label>
+        <name>description</name>
+    </customLabels>
+    <customLabels>
+        <label>לבטל ריצה של WorkFLOW</label>
+        <name>disable_WF</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- englishFirstName --></label>
+        <name>englishFirstName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- englishLastName --></label>
+        <name>englishLastName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fieldsInLDS --></label>
+        <name>fieldsInLDS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fieldsInVF --></label>
+        <name>fieldsInVF</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- financialAccount --></label>
+        <name>financialAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- firstName --></label>
+        <name>firstName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fullBranchNumber --></label>
+        <name>fullBranchNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fullName --></label>
+        <name>fullName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- gender --></label>
+        <name>gender</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- joinedDate --></label>
+        <name>joinedDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- lastName --></label>
+        <name>lastName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- managingCustomerNumber --></label>
+        <name>managingCustomerNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberOfEmployees --></label>
+        <name>numberOfEmployees</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- phone --></label>
+        <name>phone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- postalCode --></label>
+        <name>postalCode</name>
+    </customLabels>
+    <customLabels>
+        <label>הרץ באט&apos;ץ</label>
+        <name>run_batch</name>
+    </customLabels>
+    <customLabels>
+        <label>שמירה</label>
+        <name>save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- signatureComponentCode --></label>
+        <name>signatureComponentCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- signatureComponents --></label>
+        <name>signatureComponents</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- slice --></label>
+        <name>slice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- status --></label>
+        <name>status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- street --></label>
+        <name>street</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- targetSector --></label>
+        <name>targetSector</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- type --></label>
+        <name>type</name>
+    </customLabels>
+    <customLabels>
+        <label>עדכן את נתוני הלקוח</label>
+        <name>updateContact</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Mobile Voice Record --></label>
+        <name>Mobile_Voice_Record</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- בדיקות מערכת --></label>
+        <name>POC_Tests</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- אפס מוצפן, 0 אודאטא --></label>
+        <name>Tab_0Enc_10oData0</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- אפס מוצפן, 1 אודאטא --></label>
+        <name>Tab_0Enc_1oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- אפס מוצפן, 2 אודאטא --></label>
+        <name>Tab_0Enc_2oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 20 מוצפן, 0 אודאטא --></label>
+        <name>Tab_20Enc_0oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 20 מוצפן, 1 אודאטא --></label>
+        <name>Tab_20Enc_1oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 20 מוצפן, 2 אודאטא --></label>
+        <name>Tab_20Enc_2oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 5 מוצפן, 0 אודאטא --></label>
+        <name>Tab_5Enc_0oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 5 מוצפן, 1 אודאטא --></label>
+        <name>Tab_5Enc_1oData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- דף לקוח- 5 מוצפן, 2 אודאטא --></label>
+        <name>Tab_5Enc_2oData</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Text_to_transform</name>
+                </fields>
+                <name>Enter_Text</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>ASCIIRes</name>
+                </fields>
+                <name>Show_Result</name>
+            </screens>
+        </flows>
+        <fullName>asciiFlowt1</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>returnedFromServ</name>
+                </fields>
+                <name>ShowRes</name>
+            </screens>
+            <screens>
+                <name>start</name>
+            </screens>
+        </flows>
+        <fullName>proxyHttp1</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+</Translations>

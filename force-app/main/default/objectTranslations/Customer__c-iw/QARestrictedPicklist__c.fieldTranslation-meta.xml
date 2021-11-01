@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- שדה מוגבל --></label>
+    <name>QARestrictedPicklist__c</name>
+    <picklistValues>
+        <masterLabel>ערך ראשון</masterLabel>
+        <translation><!-- ערך ראשון --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ערך שלישי</masterLabel>
+        <translation><!-- ערך שלישי --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ערך שני</masterLabel>
+        <translation><!-- ערך שני --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

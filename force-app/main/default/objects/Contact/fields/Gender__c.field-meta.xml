@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gender__c</fullName>
+    <externalId>false</externalId>
+    <label>מין</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>אחר</fullName>
+                <default>true</default>
+                <label>אחר</label>
+            </value>
+            <value>
+                <fullName>זכר</fullName>
+                <default>false</default>
+                <label>זכר</label>
+            </value>
+            <value>
+                <fullName>נקבה</fullName>
+                <default>false</default>
+                <label>נקבה</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
