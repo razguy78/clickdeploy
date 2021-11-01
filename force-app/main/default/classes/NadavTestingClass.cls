@@ -96,4 +96,3 @@ global with sharing class NadavTestingClass {
 		//update contact_t;
 	}
 
-}
