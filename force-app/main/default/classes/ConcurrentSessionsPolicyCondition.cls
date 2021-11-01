@@ -1,4 +1,4 @@
-global class ConcurrentSessionsPolicyCondition implements TxnSecurity.PolicyCondition {
+global without sharing class  ConcurrentSessionsPolicyCondition implements TxnSecurity.PolicyCondition {
 	// Change the MAX SESSIONS limit values as needed for your org.
 	public static Integer MAX_ADMIN_USER_SESSIONS = 1;
 	public static Integer MAX_USER_SESSIONS = 5;
