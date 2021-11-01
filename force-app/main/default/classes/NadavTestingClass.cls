@@ -30,7 +30,7 @@ global with sharing class NadavTestingClass {
 	private void init(){
 		this.customer_t = new customer__c();
 		this.contact_t = new contact();
-		this.dataToUpdate = '';
+		this.dataToUpdate = '' ; //add inline comment
 
 		String customer_tId = apexpages.currentpage().getparameters().get('customer_tId');
 		String contact_tId = apexpages.currentpage().getparameters().get('contact_tId');
