@@ -5,6 +5,11 @@
         <field>Account.Haim_Data__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Haim_check__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Manage Keys</label>
     <license>Salesforce</license>
