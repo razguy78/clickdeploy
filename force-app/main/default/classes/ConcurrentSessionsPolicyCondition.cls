@@ -1,5 +1,7 @@
 global class ConcurrentSessionsPolicyCondition implements TxnSecurity.PolicyCondition {
 	// Change the MAX SESSIONS limit values as needed for your org.
+	//change 1
+	//change 2
 	public static Integer MAX_ADMIN_USER_SESSIONS = 1;
 	public static Integer MAX_USER_SESSIONS = 5;
 	public boolean evaluate(TxnSecurity.Event e) {
